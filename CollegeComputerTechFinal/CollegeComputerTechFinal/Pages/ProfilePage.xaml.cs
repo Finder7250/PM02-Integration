@@ -50,13 +50,13 @@ namespace CollegeComputerTechFinal.Pages
                         txtTotalComputers.Text = cmd.ExecuteScalar().ToString();
                     }
 
-                    string workingQuery = "SELECT COUNT(*) FROM АРМ WHERE статус = 'Работает'";
+                    string workingQuery = "SELECT COUNT(*) FROM АРМ WHERE статус = N'Работает'";
                     using (SqlCommand cmd = new SqlCommand(workingQuery, conn))
                     {
                         txtWorkingComputers.Text = cmd.ExecuteScalar().ToString();
                     }
 
-                    string brokenQuery = "SELECT COUNT(*) FROM АРМ WHERE статус = 'Не работает' OR статус = 'Ремонт'";
+                    string brokenQuery = "SELECT COUNT(*) FROM АРМ WHERE статус = N'Не работает' OR статус = N'Ремонт'";
                     using (SqlCommand cmd = new SqlCommand(brokenQuery, conn))
                     {
                         txtBrokenComputers.Text = cmd.ExecuteScalar().ToString();
@@ -130,14 +130,22 @@ namespace CollegeComputerTechFinal.Pages
                 {
                     conn.Open();
                     string query = @"
-                        SELECT п.фио, р.наименование_роли, 
-                               CASE WHEN к.номер_кабинета IS NOT NULL THEN к.номер_кабинета ELSE 'не привязан' END as кабинет,
-                               CASE WHEN EXISTS(SELECT 1 FROM АРМ WHERE код_кабинета = п.код_кабинета) 
-                                    THEN 'активен' ELSE 'ожидает' END as статус
+                        SELECT 
+                            п.фио, 
+                            р.наименование_роли, 
+                            ISNULL(к.номер_кабинета, 'не привязан') AS кабинет,
+                            CASE 
+                                WHEN EXISTS(SELECT 1 FROM АРМ WHERE код_кабинета = п.код_кабинета) 
+                                THEN 'активен' 
+                                ELSE 'ожидает' 
+                            END AS статус
                         FROM Пользователь п
                         LEFT JOIN Роль р ON п.код_роли = р.код_роли
                         LEFT JOIN Кабинет к ON п.код_кабинета = к.код_кабинета
                         WHERE п.код_пользователя > 1
+                          AND п.фио IS NOT NULL 
+                          AND п.фио != '' 
+                          AND п.фио NOT LIKE '%?%'
                         ORDER BY п.фио";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))

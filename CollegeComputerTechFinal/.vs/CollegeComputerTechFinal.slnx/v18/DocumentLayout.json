@@ -1,12 +1,53 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\PM02\\CollegeComputerTechFinal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E60B3BEA-463A-437F-B80B-AF6947ACE6C5}|CollegeComputerTechFinal\\CollegeComputerTechFinal.csproj|c:\\pm02\\collegecomputertechfinal\\collegecomputertechfinal\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E60B3BEA-463A-437F-B80B-AF6947ACE6C5}|CollegeComputerTechFinal\\CollegeComputerTechFinal.csproj|solutionrelative:collegecomputertechfinal\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E60B3BEA-463A-437F-B80B-AF6947ACE6C5}|CollegeComputerTechFinal\\CollegeComputerTechFinal.csproj|c:\\pm02\\collegecomputertechfinal\\collegecomputertechfinal\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E60B3BEA-463A-437F-B80B-AF6947ACE6C5}|CollegeComputerTechFinal\\CollegeComputerTechFinal.csproj|solutionrelative:collegecomputertechfinal\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\PM02\\CollegeComputerTechFinal\\CollegeComputerTechFinal\\Pages\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "CollegeComputerTechFinal\\Pages\\ProfilePage.xaml",
+              "ToolTip": "C:\\PM02\\CollegeComputerTechFinal\\CollegeComputerTechFinal\\Pages\\ProfilePage.xaml",
+              "RelativeToolTip": "CollegeComputerTechFinal\\Pages\\ProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-01T14:57:14.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\PM02\\CollegeComputerTechFinal\\CollegeComputerTechFinal\\Pages\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "CollegeComputerTechFinal\\Pages\\ProfilePage.xaml.cs",
+              "ToolTip": "C:\\PM02\\CollegeComputerTechFinal\\CollegeComputerTechFinal\\Pages\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "CollegeComputerTechFinal\\Pages\\ProfilePage.xaml.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAAMAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T14:57:08.519Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

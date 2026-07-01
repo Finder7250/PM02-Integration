@@ -95,7 +95,7 @@
                     </StackPanel>
                 </Border>
 
-                <!-- Сотрудники (только для админа) -->
+                <!-- Сотрудники -->
                 <Border x:Name="UsersBorder" Background="White" CornerRadius="10" Padding="15"
                         Visibility="Collapsed">
                     <StackPanel>
@@ -118,9 +118,6 @@
                                                 <TextBlock Text="{Binding Cabinet}" Foreground="#95A5A6" 
                                                            FontSize="11"/>
                                             </StackPanel>
-                                            <TextBlock Grid.Column="1" Text="{Binding Status}" 
-                                                       Foreground="#27AE60" FontSize="12" 
-                                                       VerticalAlignment="Center" Margin="10,0,0,0"/>
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
