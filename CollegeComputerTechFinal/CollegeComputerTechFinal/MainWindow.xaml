@@ -1,0 +1,27 @@
+﻿<Window x:Class="CollegeComputerTechFinal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Учёт компьютерной техники" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen">
+
+    <DockPanel>
+        <!-- Верхнее меню с тёмным фоном -->
+        <Menu DockPanel.Dock="Top" Background="#2C3E50" Foreground="White" FontSize="14" x:Name="MainMenu">
+            <MenuItem Header="📰 Новости" Click="News_Click" Foreground="White" Margin="0,0,10,0"/>
+            <MenuItem Header="👤 Личный кабинет" Click="Profile_Click" Foreground="White" Margin="0,0,10,0"/>
+            <MenuItem Header="🏫 Кабинеты" Click="Cabinets_Click" Foreground="White" Margin="0,0,10,0"/>
+            <Separator Background="#555" Width="1" Margin="5,0"/>
+            <MenuItem Header="🚪 Выход" Click="Exit_Click" Foreground="#E74C3C" Margin="10,0,0,0"/>
+        </Menu>
+
+        <!-- Статусбар -->
+        <StatusBar DockPanel.Dock="Bottom" Background="#2C3E50">
+            <StatusBarItem>
+                <TextBlock x:Name="txtStatus" Foreground="White" Padding="5"/>
+            </StatusBarItem>
+        </StatusBar>
+
+        <!-- Основной контент -->
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    </DockPanel>
+</Window>
